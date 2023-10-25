@@ -1,0 +1,65 @@
+body{
+    background-color:rgb(22, 22, 22)
+}
+
+.container{
+    max-width: 960 px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.notes-list{
+    display: grid;
+    grid-gap:1rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.note{
+    background-color: #303030;
+    color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    min-height: 100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+}
+
+.note-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.note.new{
+    background-color: rgb(241, 186, 3);
+}
+
+textarea{
+    border: none;
+    resize:none;
+    background-color: rgb(241, 186, 3);
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.save{
+    background-color:rgba(255, 83, 83, 0.417);
+    border:none;
+    border-radius: 15px;
+    padding:5px 10px 5px 10px;
+}
+
+.save:hover{
+    background-color:rgba(233, 67, 67, 0.417);
+    cursor:pointer;
+}
+
+.delete-icon:hover{
+    cursor:pointer;
+}

@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import ReactDOM from 'react-dom';
+import App from './App.js'; // Импортируем компонент App из app.js
+import "react-bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "./index.css"
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <App /> {/* Используем компонент App здесь */}
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
