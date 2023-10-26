@@ -16,17 +16,18 @@ body{
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
 
-.note{
+.note {
     background-color: #303030;
     color: white;
     border-radius: 20px;
     padding: 1rem;
-    min-height: 100px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     white-space: pre-wrap;
+    margin: 10px; /* Отступ между заметками */
 }
+
 
 .note-footer{
     display:flex;
@@ -48,6 +49,8 @@ textarea:focus{
     outline: none;
 }
 
+
+
 .save{
     background-color:rgba(255, 83, 83, 0.417);
     border:none;
@@ -60,6 +63,10 @@ textarea:focus{
     cursor:pointer;
 }
 
-.delete-icon:hover{
+.delete-icon{
     cursor:pointer;
+}
+
+.dynamic-height {
+    min-height: 0;
 }

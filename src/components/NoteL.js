@@ -7,6 +7,7 @@ const NoteL = ({ notes, handleNewNote, handleDeleteNote }) => {
       {notes.map((note) => (
         <Note
           id={note.id}
+          note_theme={note.note_theme}
           text={note.text}
           date={note.date}
           handleDeleteNote={handleDeleteNote}
