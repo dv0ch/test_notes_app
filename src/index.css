@@ -1,72 +1,118 @@
-body{
-    background-color:rgb(22, 22, 22)
+body {
+  background-color: rgb(22, 22, 22);
+  
 }
 
-.container{
-    max-width: 960 px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+.container {
+  max-width: 960 px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.notes-list{
-    display: grid;
-    grid-gap:1rem;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .note {
-    background-color: #303030;
-    color: white;
-    border-radius: 20px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    white-space: pre-wrap;
-    margin: 10px; /* Отступ между заметками */
+  background-color: #303030;
+  color: white;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  margin: 10px; /* Отступ между заметками */
 }
 
-
-.note-footer{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.note.new{
-    background-color: rgb(241, 186, 3);
+.note.new {
+  background-color: rgb(241, 186, 3);
+  position: fixed;
+  top: 50%; /* Расположите окно по вертикали посередине */
+  left: 50%; /* Расположите окно по горизонтали посередине */
+  transform: translate(-50%, -50%); /* Центрируйте окно точно посередине */
+  z-index: 999; /* Устанавливает z-index поверх остальных элементов */
 }
 
-textarea{
-    border: none;
-    resize:none;
-    background-color: rgb(241, 186, 3);
+textarea {
+  border: none;
+  resize: none;
+  background-color: rgb(241, 186, 3);
 }
 
-textarea:focus{
-    outline: none;
+textarea:focus {
+  outline: none;
 }
 
-
-
-.save{
-    background-color:rgba(255, 83, 83, 0.417);
-    border:none;
-    border-radius: 15px;
-    padding:5px 10px 5px 10px;
+.save {
+  background-color: rgba(255, 83, 83, 0.417);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
 }
 
-.save:hover{
-    background-color:rgba(233, 67, 67, 0.417);
-    cursor:pointer;
+.save:hover {
+  background-color: rgba(233, 67, 67, 0.417);
+  cursor: pointer;
 }
 
-.delete-icon{
-    cursor:pointer;
+.delete-icon {
+  cursor: pointer;
 }
 
 .dynamic-height {
-    min-height: 0;
+  min-height: 0;
 }
+
+.create-note-button {
+  position: fixed; /* Зафиксировать позицию */
+  bottom: 20px; /* Отступ снизу */
+  right: 20px; /* Отступ справа */
+  background-color: rgb(241, 186, 3);
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Устанавливает z-index поверх остальных элементов */
+}
+
+.underblock {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Перекрывает все остальное на странице */
+  }
+  
+  /* Стили для окна создания заметки */
+  .modal > .note {
+    /* Ваши стили для окна создания заметки */
+  }
