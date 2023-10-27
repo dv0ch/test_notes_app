@@ -17,6 +17,8 @@ const App = () => {
 
   const [createNote, setCreateNote] = useState(false);
 
+  const [editingNoteId, setEditingNoteId] = useState(null); // Добавляем состояние для отслеживания редактирования заметок
+
   const handleCreate = () => {
     setCreateNote((prev) => !prev);
   };
@@ -37,14 +39,22 @@ const App = () => {
     const now = new Date();
     const formattedDate = now.toISOString();
     const newNote = {
-      id: Math.random().toString(),
+      id: nanoid(),
       note_theme: theme,
       text: text,
       date: formattedDate,
     };
 
     setNotes([...notes, newNote]);
-    setCreateNote(false); // Закрыть окно создания заметки после создания
+    setCreateNote(false);
+  };
+
+  const editNote = (id, editedTheme, editedText) => {
+    const updatedNotes = notes.map((note) =>
+      note.id === id ? { ...note, note_theme: editedTheme, text: editedText } : note
+    );
+    setNotes(updatedNotes);
+    setEditingNoteId(null); // Завершаем редактирование
   };
 
   const deleteNote = (id) => {
@@ -59,6 +69,9 @@ const App = () => {
         notes={notes}
         handleNewNote={newNote}
         handleDeleteNote={deleteNote}
+        handleEditNote={editNote} // Передаем функцию editNote в NoteL
+        editingNoteId={editingNoteId} // Передаем id заметки для редактирования
+        setEditingNoteId={setEditingNoteId} // Передаем функцию для установки id заметки для редактирования
       />
       {createNote && (
         <div className="modal">

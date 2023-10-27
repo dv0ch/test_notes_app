@@ -1,0 +1,29 @@
+[33mcommit 738a758d738c4d67b5c5840c87291f0bc80e154d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: dv0ch <dv0chh@gmail.com>
+Date:   Fri Oct 27 12:10:56 2023 +0300
+
+    Исправление вылезание текста за рамки и добавление кнопки
+
+[33mcommit 654a16d15f25fdd0e449f9727a69ba1324144b0f[m
+Author: dv0ch <dv0chh@gmail.com>
+Date:   Thu Oct 26 17:36:06 2023 +0300
+
+    Добавление функционала
+
+[33mcommit 591df2474f9210bd07c70256687a2a9c9d8675a9[m
+Author: dv0ch <dv0chh@gmail.com>
+Date:   Wed Oct 25 16:33:43 2023 +0300
+
+    Добавление компонентов
+
+[33mcommit d2c4c4d976c98d66206050b15fbef26a56703f72[m
+Author: dv0ch <dv0chh@gmail.com>
+Date:   Wed Oct 25 00:00:58 2023 +0300
+
+    Создание репозитория
+
+[33mcommit c27a27bf45d166c6f535084d7ef24a8a03aaba14[m
+Author: dv0ch <dv0chh@gmail.com>
+Date:   Tue Oct 24 23:49:43 2023 +0300
+
+    Initialize project using Create React App

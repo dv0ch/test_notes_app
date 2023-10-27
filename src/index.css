@@ -1,6 +1,15 @@
 body {
   background-color: rgb(22, 22, 22);
-  
+}
+
+.header {
+  color: #fff;
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container {
@@ -44,6 +53,7 @@ body {
   left: 50%; /* Расположите окно по горизонтали посередине */
   transform: translate(-50%, -50%); /* Центрируйте окно точно посередине */
   z-index: 999; /* Устанавливает z-index поверх остальных элементов */
+  width: 60%;
 }
 
 textarea {
@@ -100,19 +110,65 @@ textarea:focus {
 }
 
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999; /* Перекрывает все остальное на странице */
-  }
-  
-  /* Стили для окна создания заметки */
-  .modal > .note {
-    /* Ваши стили для окна создания заметки */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Перекрывает все остальное на странице */
+}
+
+/* Добавьте следующие стили в ваш файл CSS или внутри компонента, где применяются стили */
+
+.edit-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: none;
+  z-index: 1;
+}
+
+.edit-menu.active {
+  display: block;
+}
+
+.edit-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edit-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-menu li:hover {
+  background-color: #e0e0e0;
+}
+
+.save-button {
+  background-color: rgb(241, 186, 3);
+  color: #000000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.save-button:hover {
+  background-color: rgb(207, 159, 2);
+}
+
+.note-theme {
+  text-transform: uppercase; /* Преобразовать текст в заглавные буквы */
+  font-weight: bold; /* Жирный шрифт */
+}
