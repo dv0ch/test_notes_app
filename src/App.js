@@ -6,12 +6,14 @@ import CreateNoteButton from "./components/CreateNoteButton";
 import NewNote from "./components/NewNote";
 
 const App = () => {
+  const now = new Date();
+  const formattedDate = now.toISOString();
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
       note_theme: "Это тема заметки",
       text: "Это тестовая заметка",
-      date: "28.10.2023 19:31:29",
+      date: formattedDate,
     },
   ]);
 
@@ -36,8 +38,6 @@ const App = () => {
   }, [notes]);
 
   const newNote = (theme, text) => {
-    const now = new Date();
-    const formattedDate = now.toISOString();
     const newNote = {
       id: nanoid(),
       note_theme: theme,
@@ -51,7 +51,9 @@ const App = () => {
 
   const editNote = (id, editedTheme, editedText) => {
     const updatedNotes = notes.map((note) =>
-      note.id === id ? { ...note, note_theme: editedTheme, text: editedText } : note
+      note.id === id
+        ? { ...note, note_theme: editedTheme, text: editedText }
+        : note
     );
     setNotes(updatedNotes);
     setEditingNoteId(null); // Завершаем редактирование
