@@ -28,7 +28,7 @@ const NewNote = ({ handleNewNote }) => {
 
   const handleSaveClick = () => {
     if (noteTheme.trim().length > 0 && noteText.trim().length > 0) {
-      handleNewNote(noteTheme, noteText); // Передаем отдельные значения для темы и текста
+      handleNewNote(noteTheme, noteText); 
       setNoteText("");
       setNoteTheme("");
     }

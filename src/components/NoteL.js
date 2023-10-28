@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Note from "./Note";
-import EditNoteForm from "./EditNoteForm"; // Импортируйте компонент EditNoteForm
+import EditNoteForm from "./EditNoteForm"; 
 
 const NoteL = ({ notes, handleDeleteNote, handleEditNote }) => {
   const [editingNoteId, setEditingNoteId] = useState(null);
