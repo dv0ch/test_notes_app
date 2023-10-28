@@ -4,7 +4,7 @@ body {
 
 .header {
   color: #fff;
-  text-align: center; /* Выравнивание текста по центру */
+  text-align: center; 
   padding: 20px;
   font-size: 24px;
   font-weight: bold;
@@ -37,7 +37,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   white-space: pre-wrap;
-  margin: 10px; /* Отступ между заметками */
+  margin: 10px; 
+  width: "100%"
 }
 
 .note-footer {
@@ -49,10 +50,10 @@ body {
 .note.new {
   background-color: rgb(241, 186, 3);
   position: fixed;
-  top: 50%; /* Расположите окно по вертикали посередине */
-  left: 50%; /* Расположите окно по горизонтали посередине */
-  transform: translate(-50%, -50%); /* Центрируйте окно точно посередине */
-  z-index: 999; /* Устанавливает z-index поверх остальных элементов */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 999;
   width: 60%;
 }
 
@@ -61,6 +62,7 @@ textarea {
   resize: none;
   background-color: rgb(241, 186, 3);
 }
+
 
 textarea:focus {
   outline: none;
@@ -87,9 +89,9 @@ textarea:focus {
 }
 
 .create-note-button {
-  position: fixed; /* Зафиксировать позицию */
-  bottom: 20px; /* Отступ снизу */
-  right: 20px; /* Отступ справа */
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
   background-color: rgb(241, 186, 3);
   color: white;
   font-size: 24px;
@@ -101,7 +103,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Устанавливает z-index поверх остальных элементов */
+  z-index: 1000; 
 }
 
 .underblock {
@@ -115,14 +117,12 @@ textarea:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999; /* Перекрывает все остальное на странице */
+  z-index: 999; 
 }
-
-/* Добавьте следующие стили в ваш файл CSS или внутри компонента, где применяются стили */
 
 .edit-menu {
   position: absolute;
@@ -169,6 +169,9 @@ textarea:focus {
 }
 
 .note-theme {
-  text-transform: uppercase; /* Преобразовать текст в заглавные буквы */
-  font-weight: bold; /* Жирный шрифт */
+  text-transform: uppercase; 
+  font-weight: bold; 
+}
+.character-count {
+  color: black; 
 }

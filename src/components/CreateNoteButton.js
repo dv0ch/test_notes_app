@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const CreateNoteButton = ({ onClick }) => (
   <motion.button
     className="create-note-button"
-    whileTap={{ scale: 1.2 }} // Масштабирование при нажатии
+    whileTap={{ scale: 1.2 }} 
     onClick={onClick}
   >
     +

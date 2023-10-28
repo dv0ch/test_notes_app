@@ -50,7 +50,7 @@ const NewNote = ({ handleNewNote }) => {
         onChange={handleTextChange}
       ></textarea>
       <div className="note-footer">
-      <div className="character-count" style={{ color: "black" }}>
+      <div className="character-count">
         Тема: {themeCharacterCount}/{themeCharacterLimit} / Текст: {textCharacterCount}/{textCharacterLimit}
       </div>
         <button className="save" onClick={handleSaveClick}>

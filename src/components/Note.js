@@ -34,7 +34,7 @@ const Note = ({
   return (
     <div
       className="note"
-      style={{ width: "100%" }}
+      
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
